@@ -1,0 +1,35 @@
+{
+	"background": {
+		"persistent": false,
+		"scripts": [
+            "stego_web_raw.js",
+            "stego_web.js",
+            "context_menu.js"
+        ]
+	},
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"description": "Decoding extension.",
+	"icons": {
+		"16": "img/icon16.png",
+		"128": "img/icon128.png"
+	},
+	"manifest_version": 2,
+	"name": "Decoder",
+	"offline_enabled": true,
+    "page_action": {
+        "default_popup": "interface.html",
+        "default_icons": {
+            "16": "img/icon16.png",
+            "128": "img/icon128.png"
+        }
+    },
+	"permissions": [ 
+        "activeTab",
+        "contextMenus",
+        "storage",
+        "declarativeContent",
+        "http://*/",
+        "https://*/"
+    ],
+	"version": "0.2"
+}

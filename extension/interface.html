@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p><b>StegoCODEC (c) 2018 Toshi Ha.</b></p>
+        <form id="selector">
+            <input type="radio" id="selector-html" name="type" value="html" checked />HTML
+            <input type="radio" id="selector-video" name="type" value="video" />Video
+            <input type="radio" id="selector-image" name="type" value="image" />Image link
+        </form>
+        <form id="enc_form">
+            <label for="key">Key (for encoding/decoding):</label>
+            <input type="password" name="key" id="key" />
+            <hr/>
+            <label for="encode_file">Encode file:</label>
+            <input type="file" name="encode_file" id="encode_file" accept=".png,.jpg"/>
+            <br/>
+            <div id="enc_form_inner">
+            </div>
+            <input type="submit" value="Encode"/>
+            <br/>
+            <a id="encode_a">
+                <img id="encode_output" class="enimg" style="display:none; max-width:500px; max-height:200px;" />
+            </a>
+            <div>
+                <pre id="encode_status" />
+            </div>
+        </form>
+        <!-- --!>
+        <script src="interface.js"></script>
+        <script src="stego_web.js"></script>
+        <script src="stego_web_raw.js"></script>
+    </body>
+</html>
